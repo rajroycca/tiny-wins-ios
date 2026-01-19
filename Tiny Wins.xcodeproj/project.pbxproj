@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ED1F34902F1DA57E00CD47AF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1F348F2F1DA57E00CD47AF /* WidgetKit.framework */; };
+		ED1F34922F1DA57E00CD47AF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1F34912F1DA57E00CD47AF /* SwiftUI.framework */; };
+		ED1F34A12F1DA58100CD47AF /* TinyWinsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ED1F348D2F1DA57E00CD47AF /* TinyWinsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED1F349F2F1DA58100CD47AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED1F34702F1D74DB00CD47AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED1F348C2F1DA57E00CD47AF;
+			remoteInfo = TinyWinsWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED1F34A62F1DA58100CD47AF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ED1F34A12F1DA58100CD47AF /* TinyWinsWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ED1F34782F1D74DB00CD47AF /* Tiny Wins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Wins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1F348D2F1DA57E00CD47AF /* TinyWinsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TinyWinsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1F348F2F1DA57E00CD47AF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		ED1F34912F1DA57E00CD47AF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		ED1F34A72F1DA5C400CD47AF /* TinyWinsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyWinsWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ED1F34A22F1DA58100CD47AF /* Exceptions for "TinyWinsWidget" folder in "TinyWinsWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = ED1F348C2F1DA57E00CD47AF /* TinyWinsWidgetExtension */;
+		};
+		ED1F34A92F1DA7DB00CD47AF /* Exceptions for "Tiny Wins" folder in "TinyWinsWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TinyWinsStore.swift,
+			);
+			target = ED1F348C2F1DA57E00CD47AF /* TinyWinsWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ED1F347A2F1D74DB00CD47AF /* Tiny Wins */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				ED1F34A92F1DA7DB00CD47AF /* Exceptions for "Tiny Wins" folder in "TinyWinsWidgetExtension" target */,
+			);
 			path = "Tiny Wins";
+			sourceTree = "<group>";
+		};
+		ED1F34932F1DA57E00CD47AF /* TinyWinsWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				ED1F34A22F1DA58100CD47AF /* Exceptions for "TinyWinsWidget" folder in "TinyWinsWidgetExtension" target */,
+			);
+			path = TinyWinsWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +88,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED1F348A2F1DA57E00CD47AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED1F34922F1DA57E00CD47AF /* SwiftUI.framework in Frameworks */,
+				ED1F34902F1DA57E00CD47AF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		ED1F346F2F1D74DB00CD47AF = {
 			isa = PBXGroup;
 			children = (
+				ED1F34A72F1DA5C400CD47AF /* TinyWinsWidgetExtension.entitlements */,
 				ED1F347A2F1D74DB00CD47AF /* Tiny Wins */,
+				ED1F34932F1DA57E00CD47AF /* TinyWinsWidget */,
+				ED1F348E2F1DA57E00CD47AF /* Frameworks */,
 				ED1F34792F1D74DB00CD47AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +115,18 @@
 			isa = PBXGroup;
 			children = (
 				ED1F34782F1D74DB00CD47AF /* Tiny Wins.app */,
+				ED1F348D2F1DA57E00CD47AF /* TinyWinsWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ED1F348E2F1DA57E00CD47AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED1F348F2F1DA57E00CD47AF /* WidgetKit.framework */,
+				ED1F34912F1DA57E00CD47AF /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +139,12 @@
 				ED1F34742F1D74DB00CD47AF /* Sources */,
 				ED1F34752F1D74DB00CD47AF /* Frameworks */,
 				ED1F34762F1D74DB00CD47AF /* Resources */,
+				ED1F34A62F1DA58100CD47AF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ED1F34A02F1DA58100CD47AF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				ED1F347A2F1D74DB00CD47AF /* Tiny Wins */,
@@ -69,6 +155,28 @@
 			productName = "Tiny Wins";
 			productReference = ED1F34782F1D74DB00CD47AF /* Tiny Wins.app */;
 			productType = "com.apple.product-type.application";
+		};
+		ED1F348C2F1DA57E00CD47AF /* TinyWinsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED1F34A32F1DA58100CD47AF /* Build configuration list for PBXNativeTarget "TinyWinsWidgetExtension" */;
+			buildPhases = (
+				ED1F34892F1DA57E00CD47AF /* Sources */,
+				ED1F348A2F1DA57E00CD47AF /* Frameworks */,
+				ED1F348B2F1DA57E00CD47AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				ED1F34932F1DA57E00CD47AF /* TinyWinsWidget */,
+			);
+			name = TinyWinsWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TinyWinsWidgetExtension;
+			productReference = ED1F348D2F1DA57E00CD47AF /* TinyWinsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +189,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					ED1F34772F1D74DB00CD47AF = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					ED1F348C2F1DA57E00CD47AF = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +211,20 @@
 			projectRoot = "";
 			targets = (
 				ED1F34772F1D74DB00CD47AF /* Tiny Wins */,
+				ED1F348C2F1DA57E00CD47AF /* TinyWinsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ED1F34762F1D74DB00CD47AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED1F348B2F1DA57E00CD47AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +241,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED1F34892F1DA57E00CD47AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED1F34A02F1DA58100CD47AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED1F348C2F1DA57E00CD47AF /* TinyWinsWidgetExtension */;
+			targetProxy = ED1F349F2F1DA58100CD47AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ED1F34812F1D74DD00CD47AF /* Debug */ = {
@@ -251,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Tiny Wins/Tiny Wins.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NAX2DM38H;
@@ -283,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Tiny Wins/Tiny Wins.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NAX2DM38H;
@@ -310,6 +446,68 @@
 			};
 			name = Release;
 		};
+		ED1F34A42F1DA58100CD47AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TinyWinsWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NAX2DM38H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinyWinsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TinyWinsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rajroyc.Tiny-Wins.TinyWinsWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED1F34A52F1DA58100CD47AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TinyWinsWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NAX2DM38H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinyWinsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TinyWinsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rajroyc.Tiny-Wins.TinyWinsWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +525,15 @@
 			buildConfigurations = (
 				ED1F34842F1D74DD00CD47AF /* Debug */,
 				ED1F34852F1D74DD00CD47AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED1F34A32F1DA58100CD47AF /* Build configuration list for PBXNativeTarget "TinyWinsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED1F34A42F1DA58100CD47AF /* Debug */,
+				ED1F34A52F1DA58100CD47AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
